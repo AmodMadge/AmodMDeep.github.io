@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-12" *ngIf="coinData">
+    <!--<p>{{ coinData | json }}</p>-->
+    <h1 class="display-4" [ngStyle]="{color: coinData.data.color}">
+      <img class=" img-fluid" src="https://raw.githubusercontent.com/dziungles/cryptocurrency-logos/master/coins/32x32/{{coinData.data.website_slug}}.png"
+        [alt]="coinData.data.slug" width="50" height="50">
+      {{coinData.data.name}} <small class="cus-small"> ( {{coinData.data.symbol}} )</small> </h1>
+      <!--<p class="lead font-weight-normal"> {{coinData.data.description}} </p>-->
+      <<div class="chart">
+        <div class="chart__container">
+          <div class="chart__holder">
+            <chart [type]="type" [data]="data" [options]="options"></chart>
+          </div>
+        </div>
+      </div>
+<!--
+      <div class="chart">{{chart}}</div>-->
+  </div>
+</div>
+
+       
+
+      
